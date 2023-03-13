@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import CityView from "../views/CityView.vue";
 
 const routes = [
   {
@@ -8,10 +9,9 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/about",
-    name: "about",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/weather/:state/:city",
+    name: "cityView",
+    component: CityView,
   },
 ];
 
